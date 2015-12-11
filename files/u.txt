@@ -1,0 +1,19 @@
+synrhronized关键字简洁、清晰、语义明确，因此即使有了Lock接口，使用的还是非常广泛。其应用层的语义是可以把任何一个非null对象 作为"锁"，当synchronized作用在方法上时，锁住的便是对象实例（this）；当作用在静态方法时锁住的便是对象对应的Class实例，因为 Class数据存在于永久带，因此静态方法锁相当于该类的一个全局锁；当synchronized作用于某一个对象实例时，锁住的便是对应的代码块.
+
+HashCode被设计用来提高性能。equals()方法与hashCode()方法的区别在于：
+
+如果两个对象相等(equal)，那么他们一定有相同的哈希值。
+如果两个对象的哈希值相同，但他们未必相等(equal)。
+
+
+http://www.importnew.com/11725.html
+
+
+has had 是现在完成时,had had 是过去完成时,has had 的 has 是第三人称,也就是“他”“她”“它” has had 意为拥有,已经拥有完了,现在还拥有,而had had 是过去拥有,现在不拥有了.
+had said是过去完成时
+has said是现在完成时
+said是过去式
+例子：他刚才说了点话：He just said something
+例子：他已经说了点话：He has said something
+例子：他昨天3点前已经说了话：He had said something before 3 pm yesterday
+
