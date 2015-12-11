@@ -1,0 +1,531 @@
+1-908-290-0715, code 375 14 375 14 - Leader 375 14 375 00
+
+The new Cognos prod server url: https://arcogprd.nam.nsroot.net/c10/bi
+UAT server url: https://arcogutg.nam.nsroot.net/c10/bi
+Flash Builder Key: Kou, Carrie [CCC-OT_IT NE]
+Citigroup Technology Inc[01279].Basel Technology[100042416]
+Citigroup Technology Inc[01279].Basel Technology[100042416]
+
+
+CTO.ChM Controlled (Including Integration) - PROD/COB – Template # CTMP0000007327 
+CTO.ChM Controlled (Including Integration) – (UAT Only) – Template # CTMP0000007538 
+
+PST#ID# 201508678		System#:PTS-W
+
+Location : Local # 1-646-490-2858 | USA/Canada: 1-201-942-4563/ 1-908-290-0715| India (toll free): 000 800 1008 190. Passcode : 7364073640
+[080808]feb@2013            WS13446816   I need the access to deploy code.  Jessiejacky@123 3583EAA405   mstsc SandyEmer66166.NAM.NSROOT.NET   Jessiejacky@123
+https://cmp.nj.ssmb.com/marketplace/control/product/~productId=47277_187923_GLOBAL#
+WebSpherePluginConfig /etc/opt/IHS70021/rcast-ssl/conf/plugin-cfg.xml
+L:\CIBTech X\CreditRisk\Project_Mgmt\Projects\RCAST Reporting\Daily Work
+\\cnshagcb19\CNSHZJPRN17 (file://cnshagcb19/CNSHZJPRN17)
+
+1. Execute the below script from the unix command like to get the abinitio environment
+
+      . ./abinitio/apps30/ste-abinitio30.env
+
+2. Type the below command after the Step1
+
+      m_password  -unrestricted  -password <password>
+air lock break -object /Projects/CitiTech/RT/CRT/cst/dml/cst_WSC_raw_feed_input.dml
+AB_USERNAME @ ccrsais11cu.nam.nsroot.net : yl70801
+AB_ENCRYPTED_PASSWORD @ ccrsais11cu.nam.nsroot.net : 6DVRiFFUup2oor7tFQFNBp
+AB_SSH_NEEDS_PASSWORD @ ccrsais11cu.nam.nsroot.net : true 
+AB_CONNECTION @ ccrsais11cu.nam.nsroot.net : ssh
+AB_HOME @ ccrsais11cu.nam.nsroot.net : /optware/abinitio30
+
+Select Tablespace_Name, Round(Sum(Bytes)/1024/1024,2) "free_size MB" From Dba_Free_Space Group By Tablespace_Name;
+.abinitiorc 
+jar -uf a.jar com/a.class    //更新文件到jar中，名录一定要对应
+webproxy.wlb.nsroot.net   8080
+
+localhost, 127.0.0.1
+/rcast/emt-was/70/bin/emt -Action DeleteCell -xml /rcast/backup/rcastCell.xml
+/rcast/emt-was/70/bin/emt -Action Create -xml /rcast/backup/rcastCell.xml
+/rcast/emt-was/70/bin/emt -Action EnableConsole -xml /rcast/backup/cloudappCell.xml
+https://mwrcastap1p.nam.nsroot.net:10087/ibm/console
+/rcast/emt-was/70/bin/emt -Action AddVirtualHost -xml /rcast/backup/rcastCell.xml
+
+/etc/rc3.d/S99emtWas70 stop
+
+Build other projects :  raptor-client, raptor,rcast-report-generator
+<svn localWorkingCopy="projects/${project.name}" username="cvaqasvn"   password="cvaqasvn123"/>
+
+/etc/rc3.d/S99emtWas80 stop
+/etc/rc3.d/S99emtWas80 start
+
+
+AB_USERNAME @ ccrsais10d.nam.nsroot.net : yl70801
+AB_ENCRYPTED_PASSWORD @ ccrsais10d.nam.nsroot.net : DzwHuoqdN6e4f4QhtfOy2U
+AB_SSH_NEEDS_PASSWORD @ ccrsais10d.nam.nsroot.net : true 
+AB_CONNECTION @ ccrsais10d.nam.nsroot.net : ssh
+AB_HOME @ ccrsais10d.nam.nsroot.net : /optware/abinitio30
+
+
+
+Institutional Clients Group ==> ICG
+sp99442
+du -sh .
+df -h .
+
+https://cfgdb.nam.nsroot.net
+ALTER TABLE CvaNetFirmAccountMapping ADD GOC varchar(100) NULL
+Common Vi Commands
+Press Key(s):*   	Function:
+I	Insert text before the cursor
+A	Insert text after the cursor
+:	Switch to ex mode
+$	Go to last place on the line
+^	Go to first place on the line
+W	Next word
+B	Previous word
+Shift-G	Last line of the file
+20 Shift-G	Go to line 20
+Y	Copy. (Note: Y3W = copy 3 words; Y3J = copy 4 lines.)
+P	Paste
+D	delete all content to the right of the cursor
+D$    delete all content to the right of the cursor
+D^    delete all content to the left of the cursor
+X	Delete character under the cursor
+ctrl-F 	Move forward one screen.
+ctrl-B 	Move backward one screen.
+h/l/j/k		move cursor left, right, down and up
+0		move to beginning of line
+i		Begin inserting text at current cursor location 
+I		Begin inserting text at the beginning of the current line
+a		Begin appending text, one character to the right of current cursor location
+A		Begin appending text at the end of the current line
+o/O		Begin entering text one line below\above current line
+ESC		Exit insertion mode and return to command mode
+
+Comparisons:
+-eq	equal to
+-ne	not equal to
+-lt	less than
+-le	less than or equal to
+-gt	greater than
+-ge	greater than or equal to
+-a &&
+-o ||
+
+File Operations:
+-s	file exists and is not empty
+-f	file exists and is not a directory
+-d	directory exists
+-x	file is executable
+-w	file is writable
+-r	file is readable
+-z	the value is ''
+-n	the value is not ''
+
+$# Number of arguments on commandline.
+$? Exit status of last command.
+$$ Process id of current program.
+$! Process id of last backgroundjob or background function.
+$0 Program name including the path if started from another directory.
+$1..n Commandline arguments, each at a time.
+$* All commandline arguments in one string.
+"$@" is a special construct that catches spaces in filenames.
+
+?(pattern) matches zero or one times the pattern.
+*(pattern) matches any time the pattern.
++(pattern) matches one or more time the pattern.
+@(pattern) matches one time the pattern.
+!(pattern) matches string without the pattern.
+linux command: vmstat 5 10
+^p
+* + ? *? {3} {2,5}
+
+ps -ef |grep cvadev |grep start
+
+restart servers -----  https://weiswbii.nj.ssmb.com/
+GDS             -----  https://gdsunix.nj.ssmb.com/cgi-bin/index.cgi
+Hermes 					-----  https://gcateng-nj1p.nam.nsroot.net:6550/steWebApp/appmanager/portal/my
+AutoSys					-----	 https://autoweb.nj.ssmb.com/html/index.html
+=======DEV    qQQ!23    12apes    31k63AkD 2pizza  welcome123
+scp cvahome.tar kb59097@web390gsobn01d:/home/kb59097
+scp cvahome.tar kb59097@web390gwlbn01d:/export/enterprise-docs/cva/10.3/weblogic/war_deployments
+scp cvahome.tar kb59097@web390gwlbn02d:/export/enterprise-docs/cva/10.3/weblogic/war_deployments
+=======UAT
+<font style="background-color: #d0e6ff"><font color="#d0e6ff"></font>
+scp cvahome.tar kb59097@webswdcwlbn01s:/home/kb59097
+scp cvahome.tar bl53386@webswdcwlbn02s:/home/bl53386
+scp cvahome.tar kb59097@webswdcsobn01s:/home/kb59097
+
+scp cvahome.tar bl53386@webswdcwlbn01s:/tmp
+scp cvahome.tar bl53386@webswdcwlbn02s:/tmp
+scp cvahome.tar bl53386@webswdcsobn01s:/tmp
+pbrun cva
+
+svn diff -r 15009:15655 file:///opt/risk_master/SVNRoot/CVANettingWeb/trunk
+
+svn copy -m"create branch"  -r17736 svn+ssh://yl70801@gclswrcaap1d.nam.nsroot.net/opt/risk_master/SVNRoot/CVANettingWeb/trunk svn+ssh://yl70801@gclswrcaap1d.nam.nsroot.net/opt/risk_master/SVNRoot/CVANettingWeb/branches/nettingweb_prod_r17736
+
+360021101111914 ---- CET4
+
+10.183.3.167     			system123
+0411-39778091         salomon786
+\\cnshagcb3\data_grp\sshCIBTech\CIBTech X\OpRisk\1.0 PM\1.19 Intern Plan\Weekly Report
+/opt/sybase/125/OCS-12_5/bin/isql -Ucvaprod -Pcvaprod123 -SCVA_QA6 -I ~/interfaces -i 1.sql 
+
+/xenv/svn/X/1.4.5l/bin/svn co svn+ssh://yl70801@gclswrcaap1d.nam.nsroot.net/opt/risk_master/SVNRoot/CVA_NETTING
+svn co svn+ssh://cvadev@gclswrcaap1d.nam.nsroot.net/opt/risk_master/SVNRoot/CVA_NETTING netting
+
+ps -ef|grep "/cvadev/dev5/netting"|awk -F " " '{print $2}'|xargs kill -9
+ps -ef |grep java | grep yl70801| awk '{print $2}' |xargs kill -9
+ps -fu cvadev|grep netting|awk '{print $2}'|xargs kill -9
+add this to ur path :/xenv/svn/X/1.4.5l/bin/svn
+
+
+http://euwebgate.eu.ssmb.com/proxy.pac
+tim _tel:13501840884
+
+
+This is your extension and pass word, pls contact the help desk 60232 to install the telephone for you.
+Best regards.
+
+ICG China Development Center 
+Citicorp Software and Technology Services (Shanghai) Ltd. (CSTS)
+Tel:  +86 21 38954626 Ext 60850
+Fax: +86 21 50800623
+
+
+PRIVATE AND CONFIDENTIAL
+
+
+Your full digits of the new IPT Login password are 9683311 with access granted for CitiGroup IPT Extension enabled with reference to your IPT extension application. 
+
+Please ask on-site helpdesk to configure on your IPT with this code to activate your extension after our notification.
+
+You may contact our helpdesk if you need any clarification.
+
+<font style='font-weight: bold;color:red'>failed</font>
+
+sqlldr BAD=/abinitio/tmp/abtmp_psaiutg/CST_STRESS_DATA_HIST__table_-3292.rej CONTROL=/abinitio/tmp/abtmp_psaiutg/CST_STRESS_DATA_HIST__table_-3292.ctl DIRECT=TRUE ERRORS=50 LOG=/abinitio/tmp/abtmp_psaiutg/CST_STRESS_DATA_HIST__table_-3292.log
+bcp cva..CvaNetCeEadTransaction in /cvadeva/ia4/netting/work/monthlyRun_20101130_30/tradeex/tout/ead.CE.txt -I /cvadeva/ia4/netting/config/interfaces -SCVA_DEV -Ucvaprod  -Pcvaprod123 -c -t'|' -Y -e bcp.in.err
+We will kick off F2N weekly run with cob 20110413, please confirm  below dropbox is ready at your side  
+
+FireFox IE Proxy URL: http://euwebgate.eu.ssmb.com/proxy.pac
+
+select * into aa from bb.
+renderer: Ext.util.Format.dateRenderer('n/j/Y g:i A')
+
+var myMask = new Ext.LoadMask(Ext.getBody(), {msg:"loading customize settings..."});myMask.show();
+
+https://collaboration.cmb.citigroup.net/sites/CitiRisk/Lists/Issues%20%20Risks/AllItems.aspx
+
+# tar -cvf archive_name.tar directory_to_compress
+# tar -xvf archive_name.tar -C /tmp/extract_here/
+# tar -zcvf archive_name.tar.gz directory_to_compress
+# tar -zxvf archive_name.tar.gz
+# tar -zxvf archive_name.tar.gz -C /tmp/extract_here/
+# tar -jcvf archive_name.tar.bz2 directory_to_compress
+# tar -jxvf archive_name.tar.bz2 -C /tmp/extract_here/
+# zip -r archive_name.zip directory_to_compress
+# unzip archive_name.zip
+
+--don’t execute SQL.
+1> set noexec on
+2> go
+--show query plan. 
+1> set showplan on
+2> go
+
+1> set showplan on
+2> set fmtonly on
+3> go
+
+set statistics {io, simulate, subquerycache, time} [on | off]
+
+Hi Yan,
+Please change the ownership to na-whg-webbank support.
+Currently it is showing Owner Group as "CTI AP 1T MY"
+
+More tuning inside:
+
+http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.help.doc.sybk_inst_301.sybooks301/html/sybooks301/title.htm&
+
+
+if [ "$3" = "s" ]
+then
+	svn diff -r $1:$2 file:///opt/risk_master/SVNRoot/CVA_NETTING > sever_diff.txt
+else
+	svn diff -r $1:$2 file:///opt/risk_master/SVNRoot/CVANettingWeb/trunk > web_diff.txt
+fi
+ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue) 
+
+
+Li, Yingchun	NA	86-13585791708
+Bian, Kai	86-0523-6557570	86-13564503245
+Luo Xiangqiang	 N/A	13564094533 
+Yang, Conli	 N/A	13524173654
+
+boolen 		8 		1 byte
+byte			8			1 byte
+char			16		2 byte
+short			16		2 byte
+int				32		4 byte
+float			32		4 byte
+double		64		8 byte
+long			64		8 byte
+
+na-whg-webbank support
+
+logMgr.do
+
+%s/itemRenderer:'[a-zA-Z_0-9]*',//g
+
+%s/itemEditor:'[a-zA-Z_0-9]*',//g
+
+%s/editable:true,//g
+
+awk -F"|" '{ if($19=="true") printf "%s_%s|%s\n",$7,$8,$0}'  safe-sabino-transaction.dat.ext > safe-sabino-transaction.dat.ext.temp1
+awk -F"," 'BEGIN{rating="1,2,2+,2-,3,3+,3-,4,4+,4-,5,5+,5-,6,6+,6-,7,7+,7-,99";split(rating,ARR,",");} {for(i in ARR){ if($6==ARR[i]) print ARR[i]"===="$0}}' pd.mcc.spreadbase.20120229.dat
+
+awk -F"|" 'BEGIN{sum=0;} {if(NR>1){sum = sum + $24;}} END{print sum;}' cva.pse.all.cons.cva_s.spreadbase.exp-20120410.pd-20120410.rating-20120410.dat.ext
+
+awk -F"|" '{if($20~/true/) printf "%s_%s|%s\n",$7,$8,$0}'  safe-sabino-transaction.dat.ext > safe-sabino-transaction.dat.ext.temp1
+
+Server : mwcvadb1p : 4110
+Id : cvaprod_ro
+Access code : Radical9
+
+Some sites:
+
+1:  https://virtualtech.eur.nsroot.net/virtualtech/  use soeid/pc pwd/APAC to log in. raised VT to resolve your PC issues.
+2:  https://onereset.citigroup.net/OneReset   you can reset your pwd(pc, sso, pincode, password for web) and unlock your account.   Do remember your pincode,  if  you forget, ask someone to apply for new one.
+3:  http://portal.asia.wlb2.apac.nsroot.net/EWPWebPortal/desktops/branding/home.portal?site=China#  the index of the citi Intranet net.
+4:  unix pwd reset site:
+      For DEV:  https://krb5admdev.nam.nsroot.net/
+      For UAT:  https://krb5adm.nam.nsroot.net/uat
+      For PROD:  https://krb5adm.nam.nsroot.net/prod
+5:  https://cmp.nj.ssmb.com/marketplace/control/main  The Market place where you can ask for software installation, unix account etc.
+6:  http://infoman.citigroup.net/ RFC request site
+7:  https://autoweb.nj.ssmb.com autosys site
+8:  https://gcateng-nj1p.nam.nsroot.net:6550 HERMES site
+9:  https://weiswbii.nj.ssmb.com/ Deploy site for DEV.
+10:  https://cfgdb.nam.nsroot.net/siteminderagent/forms/login.fcc config db information.
+
+Effective Expected Potential Exposure == EEPE
+
+
+_https://citir.nj.ssmb.com/citirisk
+_https://citir-stg.webbank.ssmb.com/citirisk
+_https://citir-dev.webbank.ssmb.com:31649/citirisk
+
+*WTS IN CTS CMB UNIX SUPPORT
+
+
+find * ! -newer s_psrsend_CVAB.520120502000346 | xargs rm -rf
+ 
+Fulfillment Questionnaire Item - Safeword Remote Access Request - New - CMP 
+Safeword Remote Access Request - New - CMP Safeword Remote Access Request - New - CMP 
+Safeword Card Issued: FM7729 
+Safeword PIN: 1094 
+Tracking Numbers: 1ZE622400476506424 
+Tracking Number for PIN - Only for an AWS Request x 
+Comments: Tracking information depends on your region - UPS is used for NA, ASI, LAT, DHL is used for all EMEA region users. Track with the proper courier
+ 
+WWDS Hostname Information:  Your WWDS Hostname depends on your region: 
+North America: PPPNA or TTYNA 
+Europe: PPPEUR or TTYEUR 
+CEMEA: PPPCEM or TTYCEM 
+Asia: PPPASI or TTYASI 
+Latin America: PPPLAT or TTYLAT 
+Card Host: 8 
+Helpful Hints: When generating your password all "O" are zeroes, all "1" are one (1), all "S" are Five(5) and do not include the hyphen (-). For WWDS dial-up service instructions, please refer to the following citiweb page: http://remoteaccess.citigroup.net
+ 
+Helpdesk: For 24-hour support, please contact the helpdesk at 1-888-435-7612.
+ 
+Important Notice: For security reasons, Safeword accounts that have not been used in over 1 year are disabled. In order to avoid having your account disabled make sure you login with your Safeword card at least once a year. 
+ 
+UPS Tracking URL: http://www.ups.com/tracking/tracking.html 
+DHL Tracking URL: http://track.dhl-usa.com/trackbynbr.asp 
+Safeword Card Deleted:  
+Automation Message:  
+
+
+select a.name,b.name,c.name from sysobjects a,syscolumns b, systypes c where a.type in ('U','V') and a.id=b.id and c.type=b.type and a.name='A_BU'
+
+# gcc foo.c -L /home/xiaowp/lib -lfoo -o foo 
+
+政治经济学、微观经济学、经济法、微观经济学、投资学、宏观经济学、股权投资与风险投资、货币银行学、商业银行管理、国际金融专题研究、财务管理、公司金融、外汇管理与金融创新。
+
+
+http://www.investopedia.com/
+http://glossary.reuters.com/index.php?title=Main_Page
+http://en.wikipedia.org/wiki/Investment_banking
+http://en.wikipedia.org/wiki/Financial_market
+http://en.wikipedia.org/wiki/Financial_risk
+http://en.wikipedia.org/wiki/Basel_Accords
+
+
+􀁹 GSST – Global Systemic Stress Testing
+􀁹 BSST – Business Specific Stress Testing
+􀁹 IVAST – Integrated VaR & Stress Testing
+􀁹 CLO – Collateralized Loan Obligation
+􀁹 RMBS – Residential Mortgage Backed Securities
+􀁹 Libor/OIS – Libor / Overnight Index Swap
+􀁹 GARCH – Generalized Autoregressive Conditional Heteroskedasticity
+􀁹 EWMA – Exponential Weighted Moving Average
+􀁹 CVA – Credit Valuation Adjustment
+
+[xl14071@ccrsais10d:/abinitio/psaidvg/sandboxes/psaidvg/CitiTech/RT/CRT/cst]
+$ cd /optware/abinitio30
+[xl14071@ccrsais10d:/optware/abinitio30]
+
+##########UAT Job list##########################
+/usr/bin/perl -I/criuat/batch/cri/cst_batch/scripts  /criuat/batch/cri/cst_batch/scripts/varflatfilebatch.pl &
+/usr/bin/perl -I/criuat/batch/cri/cst_batch/scripts /criuat/batch/cri/cst_batch/scripts/batchMonitor.pl &
+/usr/bin/perl -I/criuat/batch/cri/cst_batch/scripts  /criuat/batch/cri/cst_batch/scripts/diffRunner.pl &
+/usr/bin/perl -I/criuat/batch/cri/cst_batch/scripts /criuat/batch/cri/cst_batch/scripts/ivastRunner.pl &
+/criuat/batch/cri/cst_batch/scripts/IVASTRMI.ksh &
+/usr/bin/perl -I/criprod/batch/cri/cst_batch/scripts /criprod/batch/cri/cst_batch/scripts/batchRunner.pl &
+
+
+###UAT autosys jobs  ==> *GT US Dist Scheduling
+
+ps -ef | grep /criuat/batch/cri/cst_batch | awk '{print $2}'| xargs kill -9
+
+Default risk incremental to what is calculated through the Value-at-risk model, which often does not adequately capture the risk associated with illiquid products.
+
+=======how to set business line default values for each batch reports.
+update Batch_Report_Params set Param_Value='1,2,10,11,3,4,5,6,7,8,9,13,14,15,16,17,18,19,20,21' where Param_Name='B_L_C' and Batch_Report_Id in (select distinct Batch_Report_Id from batch_reports where batch_id=6 and report_id in (16,19));
+select distinct Batch_Report_Id from batch_reports where batch_id=6 and report_id in (16,19);
+select * from batch_defn where active=1;
+select * from report_defn;
+
+International Swaps and Derivatives Association (ISDA)
+
+python raptor-client/bin/raptorclient.py RAPTOR_UPLOAD unknown RCAST_CST_WSC '''userid=yl70801;comments=test;reportingPeriod=201505;filename=raptor.2015-05-31.csv''' &
+python raptor-client/bin/raptorclient.py RAPTOR_VALIDATE RAPTOR-C-20140324_063330545 RCAST_CST_WSC '''userid=yl70801;comments=test;reportingPeriod=201505''' &
+python raptor-client/bin/raptorclient.py RAPTOR_INITIATE RAPTOR-C-20140324_063330545 RCAST_CST_WSC '''userid=yl70801;comments=test;reportingPeriod=201505''' &
+
+1.	DEV      : http://mwcgnap1d.nam.nsroot.net:35520/p2pd/servlet/dispatch/p2plbDiag
+2.	UAT      : http://swcgnap4uc.nam.nsroot.net:25520/p2pd/servlet/dispatch/p2plbDiag 
+3.	PROD     : http://mwcgnap4p.nam.nsroot.net:15520/p2pd/servlet/dispatch/p2plbDiag
+
+http://mwcgnap2d.nam.nsroot.net:39920/p2pd/servlet/dispatch
+
+DEV:https://arcogdvg.nam.nsroot.net/c10/bi/  
+UAT:https://arcogutg.nam.nsroot.net/c10/bi/    
+PROD:https://arcogprd.nam.nsroot.net/c10/bi
+
+python raptor-client/bin/raptorclient.py RAPTOR_UPLOAD unknown DSMT '''userid=yl70801;comments=test;reportingPeriod=201403;filedelimiter=|;skipline=2,-1;filename=/tmp/DSMT_APRIL_GOC_FILE/gocdata_with_header''' &
+python raptor-client/bin/raptorclient.py RAPTOR_INITIATE RAPTOR-C-20140701_091550356 DSMT '''userid=yl70801;comments=test;reportingPeriod=201403;filedelimiter=|;skipline=2,-1;filename=/tmp/DSMT_APRIL_GOC_FILE/gocdata_with_header''' &
+python raptor-client/bin/raptorclient.py RAPTOR_UPLOAD unknown DSMT '''userid=yl70801;comments=test;reportingPeriod=201404;filedelimiter=|;skipline=2,-1;filename=/tmp/DSMT_APRIL_GOC_FILE/gocdata_with_header''' &
+
+a)            Log into cvaapdv01 as your self
+b)            pbrun in cvaappdv01 as cvaqa
+c)            ssh swcvaap1u (one of our UAT boxes)
+d)            ssh -t swcvaap3cu /bin/bash
+
+How to login db server:
+1). Login yl70801	2). scsu root	3). su - oracle		4). cd /optware/oracle/; . ./.profile_cloudapp
+sqlplus "/as sysdba"
+ALTER TABLESPACE DATA ADD DATAFILE '/oracle_datafiles/sit_data_water03.dbf' size 30G;
+alter user user_name identified by new_password account unlock;
+ALTER PROFILE "DEFAULT" LIMIT PASSWORD_VERIFY_FUNCTION NULL;
+grant create synonym to cst;
+
+ALTER TABLESPACE DATA ADD DATAFILE '/nas/rcastdata1/oracle_datafiles_do_not_delete/UAT_DB/uat_data_water02.dbf' SIZE 10M AUTOEXTEND ON NEXT 512K MAXSIZE 10G;
+ALTER TABLESPACE DATA ADD DATAFILE '/nas/rcastdata1/oracle_datafiles_do_not_delete/UAT_DB/uat_data_water02.dbf' SIZE 30G;
+==============================================================================
+SELECT df.tablespace_name "Tablespace",
+  totalusedspace "Used GB",
+  (df.totalspace - tu.totalusedspace) "Free GB",
+  df.totalspace "Total GB",
+  ROUND(100 * ( (df.totalspace - tu.totalusedspace)/ df.totalspace)) "Pct. Free"
+FROM
+  (SELECT tablespace_name,
+    ROUND(SUM(bytes+maxbytes) / (1024*1024*1024)) TotalSpace
+  FROM dba_data_files
+  GROUP BY tablespace_name
+  ) df,
+  (SELECT ROUND(SUM(bytes)/(1024*1024*1024)) totalusedspace,
+    tablespace_name
+  FROM dba_segments
+  GROUP BY tablespace_name
+  ) tu
+WHERE df.tablespace_name = tu.tablespace_name ;
+
+SELECT owner,
+segment_name,
+segment_type,
+tablespace_name,
+bytes/1048576 MB,
+initial_extent,
+next_extent,
+extents,
+pct_increase
+FROM
+DBA_SEGMENTS
+WHERE
+SEGMENT_TYPE = 'TABLE' order by bytes desc;
+=================================Enable partition============================================
+create user cst identified by banana1 default tablespace DATA account unlock;
+grant create session, grant any privilege to cst;
+grant connect ,resource,DBA to cst;
+grant all privilege to cloudapp;
+
+you can check the partitioning opion install, in the OUI check the installed product.
+to check whether partitioning enabled or not run
+SQL> select * from v$option where parameter = 'Partitioning';
+
+PARAMETER VALUE
+-------------------------------- ------------------- 
+Partitioning TRUE
+13482740638 suan
+
+$ echo $ORACLE_HOME
+/optware/oracle/11.2.0.4/db_1/rdbms/lib
+If it is not enabled in the database then do the following step: 
+
+- Shutdown all databases that use this ORACLE_HOME
+- Run the following 
+
+$ cd $ORACLE_HOME/rdbms/lib
+$ make -f ins_rdbms.mk part_on
+$ make -f ins_rdbms.mk ioracle
+========================================================================
+
+mount nyhub1.ny.ssmb.com:/xenv /xenv
+
+ccrsais10d--Dev server
+gcswsas1c -- UAT COB server
+
+gcswsas1u --UAT server
+UAT FID
+--------
+sasdemo =>sas123
+pst_u
+ccrsais10cu/11cu-- Abinitio server
+
+
+ccrsaim10p-v1(10p/11p)-- Abinitio server
+gcmwsas1p
+
+PROD FID
+--------
+pst_p
+pstp_s
+pstp_f
+
+ccrsai101d --EME
+
+scsu ==> [Dev root @ vm-050f-7bbb /opt/SCsu/etc]
+
+
+UAT & Production deployment: Change Request: CTO GL 1T LATTICE L1 SUPPORT TEAM Or CTO GL 2T LATTICE L2 SUPPORT TEAM
+
+GSST production deployment SN: CHG0000946529
+GSST UAT deployment SN: CHG0000789054
+
+
+
+==================================================================================================================
+SIE : sovereign interest event
+==================================================================================================================
+production wasce path : /cvaprod/wasce/3.0.0.3/bin
+
+setenv.sh
+JAVA_OPTS="$MEM_ARGS $USERSYSTEMPARAMETER -Denv.lifeCycle=UAT -Dwasce.ApplicationName=$APPLICATION_NAME -Dciti.log.dir=/home/cvaprod/wasce-log -Dorg.apache.geronimo.server.dir=$GERONIMO_BASE -Dorg.apache.geronimo.jaxws.builder.useSimpleFinder=true -Dorg.apache.cxf.jaxws.checkPublishEndpointPermission=false -Dorg.apache.geronimo.jaxws.provider=cxf"
