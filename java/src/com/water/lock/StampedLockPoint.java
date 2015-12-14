@@ -10,7 +10,7 @@ StampedLock有一个复杂的API，对于加锁操作，很容易误用其他方
 当只有少量竞争者的时候，synchronized是一个很好的通用的锁实现;
 当线程增长能够预估，ReentrantLock是一个很好的通用的锁实现;
  */
-class Point {
+class StampedLockPoint {
 	private double x, y;
 	private final StampedLock sl = new StampedLock();
 
