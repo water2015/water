@@ -14,7 +14,7 @@ public class SudokuTest {
 
 	@Before
 	public void setup() throws Exception {
-		sudokuSolver = (SudokuSolver) Class.forName("sodoku.impl.yl70801.SudokuSolverImpl")
+		sudokuSolver = (SudokuSolver) Class.forName("com.water.sodoku.impl.yl70801.SudokuSolverImpl")
 				.newInstance();
 	}
 
