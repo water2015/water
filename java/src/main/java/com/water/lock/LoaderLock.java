@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 public class LoaderLock {
 	private final static Logger log = Logger.getLogger(LoaderLock.class);
 
-	private static boolean isReady = true;
+	private static volatile boolean isReady = true;
 
 	private final static int retryLimit = 5;
 	private final static int retryWait = 3;
@@ -18,7 +18,7 @@ public class LoaderLock {
 		while (!isReady) {
 			try {
 				log.debug("Initiation Loader is not ready, please wait!");
-//				Thread.currentThread().wait(retryWait * 1000);
+//				Thread.currentThread().wait(retryWait * 1000);    the root reason caused by static
 //				Thread.sleep(retryWait * 1000);
 				TimeUnit.SECONDS.sleep(retryWait);
 			} catch (InterruptedException e) {
