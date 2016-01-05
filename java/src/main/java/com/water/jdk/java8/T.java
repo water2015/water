@@ -1,6 +1,9 @@
-package com.water.java8;
+package com.water.jdk.java8;
 
+import java.util.Arrays;
 import java.util.function.Function;
+
+import org.apache.commons.lang.StringUtils;
 
 public class T {
 
@@ -16,6 +19,6 @@ public class T {
 		System.out.println(times2.andThen(squared).apply(4));
 		// Returns 64
 
+		System.out.println(Arrays.asList("B2_AFS~B2_SEC~B2NCR~CPBAFS".split("~")).get(3));
 	}
-
 }

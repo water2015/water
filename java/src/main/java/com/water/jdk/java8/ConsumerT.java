@@ -1,4 +1,4 @@
-package com.water.java8;
+package com.water.jdk.java8;
 
 import java.util.function.Consumer;
 

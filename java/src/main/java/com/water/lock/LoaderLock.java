@@ -9,18 +9,18 @@ public class LoaderLock {
 
 	private static volatile boolean isReady = true;
 
-	private final static int retryLimit = 5;
+	private final static int retryLimit = 55;
 	private final static int retryWait = 3;
 
-	public synchronized static void isReady() {
+	public synchronized void isReady(String name) {
 		int retryCount = 0;
 
 		while (!isReady) {
 			try {
-				log.debug("Initiation Loader is not ready, please wait!");
-//				Thread.currentThread().wait(retryWait * 1000);    the root reason caused by static
-//				Thread.sleep(retryWait * 1000);
-				TimeUnit.SECONDS.sleep(retryWait);
+				log.debug("Initiation Loader is not ready, please wait : " + name);
+				wait(retryWait * 1000);
+				//Thread.sleep(retryWait * 1000);
+//				 TimeUnit.SECONDS.sleep(retryWait);
 			} catch (InterruptedException e) {
 				log.error("There is an exception while waiting lock", e);
 			}
@@ -31,50 +31,83 @@ public class LoaderLock {
 			}
 		}
 
-		lockNunLock(true);
+		lockNunLock(true, name);
 	}
 
-	public static void lockNunLock(boolean lock) {
+	public synchronized void lockNunLock(boolean lock, String name) {
 		if (lock) {
 			isReady = false;
-			log.debug("Locked Initiation loader.");
+			log.debug("Locked Initiation loader   : " + name);
 		} else {
 			isReady = true;
-			log.debug("Released Initiation loader.");
+			log.debug("Released Initiation loader : " + name);
+			notify();
 		}
 	}
 
+	private final static LoaderLock lock = new LoaderLock();
+
 	public static void main(String[] args) {
 
-		Runnable r = new Runnable() {
+		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				try {
-					LoaderLock.isReady();
-					TimeUnit.SECONDS.sleep(30);
+					lock.isReady("Thread 1");
+					System.out.println("Thread 1 is processing...");
+					TimeUnit.SECONDS.sleep(1);
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
-					LoaderLock.lockNunLock(false);
+					lock.lockNunLock(false, "Thread 1");
 				}
 			}
-		};
+		}).start();
 
-		Runnable r1 = new Runnable() {
+		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				try {
-					LoaderLock.isReady();
-					TimeUnit.SECONDS.sleep(30);
+					lock.isReady("Thread 2");
+					System.out.println("Thread 2 is processing...");
+					TimeUnit.SECONDS.sleep(15);
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
-					LoaderLock.lockNunLock(false);
+					lock.lockNunLock(false, "Thread 2");
 				}
 			}
-		};
+		}).start();
+		;
 
-		new Thread(r).start();
-		new Thread(r1).start();
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					lock.isReady("Thread 3");
+					System.out.println("Thread 3 is processing...");
+					TimeUnit.SECONDS.sleep(10);
+				} catch (Exception e) {
+					e.printStackTrace();
+				} finally {
+					lock.lockNunLock(false, "Thread 3");
+				}
+			}
+		}).start();
+
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					lock.isReady("Thread 4");
+					System.out.println("Thread 4 is processing...");
+					TimeUnit.SECONDS.sleep(7);
+				} catch (Exception e) {
+					e.printStackTrace();
+				} finally {
+					lock.lockNunLock(false, "Thread 4");
+				}
+			}
+		}).start();
 	}
 }
