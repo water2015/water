@@ -8,7 +8,6 @@ import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.ss.util.CellReference;
 
@@ -18,8 +17,6 @@ public class XlsxReader {
 
 	public static void main(String[] args) throws Exception {
 		String cdrPath = "L:\\Temp\\water\\tmp\\CDR.xlsx";
-		WorkbookFactory.create(new File(cdrPath));
-
 //		try (InputStream is = new FileInputStream(new File(cdrPath));
 //				StreamingReader reader = StreamingReader.builder().rowCacheSize(100).bufferSize(4096).sheetIndex(2)
 //						.read(is);) {
