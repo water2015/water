@@ -1,0 +1,101 @@
+select
+  feed.GSST_SOURCE,
+  case when craft.TERMINAL_MS_NODE is null then ms.TMS else craft.TERMINAL_MS_NODE end "TERMINAL_MS_NODE",
+  case when craft.TERMINAL_MAN_GEO is null then mg.MANAGED_GEOGRAPHY else craft.TERMINAL_MAN_GEO end "TERMINAL_MAN_GEO",
+  feed.REGION,
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then craft_seg.GSST_TPL_NAME else craft.GSST_TPL_NAME end "GSST_TPL_NAME",
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then craft_seg.SCORECARD_HIER else craft.SCORECARD_HIER end "SCORECARD_HIER",
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then craft_seg.FINAL_SL1_MAPPING else craft.FINAL_SL1_MAPPING end "FINAL_SL1_MAPPING",
+  case when (craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null) and fund.STRESS_LEVEL1 is not null then fund.STRESS_LEVEL1 else feed.STRESS_LEVEL_1 end "STRESS_LEVEL_1",
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then lv.LV1 else craft.LV1 end "LV1",
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then lv.LV2 else craft.LV2 end "LV2",
+  sub_lgl.LGL_VEH_LONG_DES AS LGL_VEH,
+  feed.LEG_V AS SUB_LGL_VEH,
+  craft.LVID,
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then lv.FRS_BU_CRAFT else craft.FRS_BU end "FRS_BU_CRAFT",
+  feed.FRS_BU,
+  feed.REPORTING_BASIS,
+  feed.GOC,
+  feed.ISSTRESSTEST,
+  acct.ACCT AS ACCT,
+  feed.GSST_CATEGORY_LEVEL2 AS SUB_ACCT,
+  feed.MARKET,
+  feed.COUNTRY,
+  feed.FUND_ID,
+  SUM(NULL)                 AS EXPECTED_lOSS,
+  SUM(GAAP_AMOUNT)          AS EXPOSURE,
+  SUM(NULL)                 AS IENC_ADJ_FACTOR,
+  SUM(NULL)                 AS EL_1YR_ADJ,
+  
+  SUM(FY1974)               AS PRICE_FY1974,
+  SUM(FY2008)               AS PRICE_FY2008,
+  SUM(DOLLAR_COLLAPSE)      AS PRICE_DOLLAR_COLLAPSE,
+  SUM(DOUBLE_DIP)           AS PRICE_DOUBLE_DIP,
+  SUM(DELAYED_RECOVERY)     AS PRICE_DELAYED_RECOVERY,
+  SUM(DEEPDOWNTURN)         AS PRICE_DEEPDOWNTURN,
+  SUM(LOSTDECADE)           AS PRICE_LOSTDECADE,
+  SUM(DOLLAR_DECLINE)       AS PRICE_DOLLAR_DECLINE,
+  SUM(INTEREST_RATE_SHOCK)  AS PRICE_INTEREST_RATE_SHOCK,
+  SUM(CAPITALBASELINE_1974) AS PRICE_CAPITALBASELINE_1974,
+  SUM(CAPITALBASELINE_2008) AS PRICE_CAPITALBASELINE_2008,
+  
+  SUM(FY1974)               AS VALUE_FY1974,
+  SUM(FY2008)               AS VALUE_FY2008,
+  SUM(DOLLAR_COLLAPSE)      AS VALUE_DOLLAR_COLLAPSE,
+  SUM(DOUBLE_DIP)           AS VALUE_DOUBLE_DIP,
+  SUM(DELAYED_RECOVERY)     AS VALUE_DELAYED_RECOVERY,
+  SUM(DEEPDOWNTURN)         AS VALUE_DEEPDOWNTURN,
+  SUM(LOSTDECADE)           AS VALUE_LOSTDECADE,
+  SUM(DOLLAR_DECLINE)       AS VALUE_DOLLAR_DECLINE,
+  SUM(INTEREST_RATE_SHOCK)  AS VALUE_INTEREST_RATE_SHOCK,
+  SUM(CAPITALBASELINE_1974) AS VALUE_CAPITALBASELINE_1974,
+  SUM(CAPITALBASELINE_2008) AS VALUE_CAPITALBASELINE_2008,
+  
+  SUM(NULL)                 AS IVAST_FY1974,
+  SUM(NULL)                 AS IVAST_FY2008,
+  SUM(NULL)                 AS IVAST_DOLLAR_COLLAPSE,
+  SUM(NULL)                 AS IVAST_DOUBLE_DIP,
+  SUM(NULL)                 AS IVAST_DELAYED_RECOVERY,
+  SUM(NULL)                 AS IVAST_DEEPDOWNTURN,
+  SUM(NULL)                 AS IVAST_LOSTDECADE,
+  SUM(NULL)                 AS IVAST_DOLLAR_DECLINE,
+  SUM(NULL)                 AS IVAST_INTEREST_RATE_SHOCK,
+  SUM(NULL)                 AS IVAST_CAPITALBASELINE_1974,
+  SUM(NULL)                 AS IVAST_CAPITALBASELINE_2008
+from CST_CAI_RAW_FEED feed 
+--active GOC
+left join CM_CRAFT craft on feed.GOC = craft.GOC and craft.REPORTING_PERIOD = 201511
+--in-active GOC mappings
+left join CM_AAI_FUND_ID_MAPPING fund on feed.FUND_ID=fund.FUND_ID and fund.REPORTING_PERIOD=201501
+left join CM_LV_Mapping lv on feed.LEG_V = lv.LV1 and lv.REPORTING_PERIOD=201508
+left join CM_MG_Mapping mg on upper(feed.country) = upper(mg.risk_country) and mg.REPORTING_PERIOD=201502
+left join CM_MS_Mapping ms on upper(case when fund.STRESS_LEVEL1 is null then feed.STRESS_LEVEL_1 else fund.STRESS_LEVEL1 end) = upper(ms.SL1) and ms.REPORTING_PERIOD=201501
+left join (select * from (SELECT row_number()over(partition BY TERMINAL_MS_NODE order by GOC) rowno,TERMINAL_MS_NODE,GSST_TPL_NAME,SCORECARD_HIER,FINAL_SL1_MAPPING FROM cm_craft where REPORTING_PERIOD=201511) where rowno=1) craft_seg on upper(ms.TMS) = upper(craft_seg.TERMINAL_MS_NODE) 
+--CST keys
+left join (select acct.acct_typ_shrt_des AS ACCT,sub.SUB_ACCT_TYP_SHRT_DES AS SUB_ACCT from sub_acct_typ_dim sub left join acct_typ_dim acct on acct.acct_typ_cod=sub.acct_typ_cod) acct on upper(feed.GSST_CATEGORY_LEVEL2)=upper(acct.SUB_ACCT)
+left join sub_lgl_veh_dim sub_lgl on upper(feed.LEG_V)=upper(sub_lgl.SUB_LGL_VEH_SHRT_DES) and sub_lgl.LGL_VEH_COD<>50099
+where feed.report_period=201511
+GROUP BY
+  feed.GSST_SOURCE,
+  case when craft.TERMINAL_MS_NODE is null then ms.TMS else craft.TERMINAL_MS_NODE end,
+  case when craft.TERMINAL_MAN_GEO is null then mg.MANAGED_GEOGRAPHY else craft.TERMINAL_MAN_GEO end,
+  feed.REGION,
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then craft_seg.GSST_TPL_NAME else craft.GSST_TPL_NAME end,
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then craft_seg.SCORECARD_HIER else craft.SCORECARD_HIER end,
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then craft_seg.FINAL_SL1_MAPPING else craft.FINAL_SL1_MAPPING end,
+  case when (craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null) and fund.STRESS_LEVEL1 is not null then fund.STRESS_LEVEL1 else feed.STRESS_LEVEL_1 end,
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then lv.LV1 else craft.LV1 end,
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then lv.LV2 else craft.LV2 end,
+  sub_lgl.LGL_VEH_LONG_DES,
+  feed.LEG_V,
+  craft.LVID,
+  case when craft.TERMINAL_MS_NODE is null or craft.TERMINAL_MAN_GEO is null then lv.FRS_BU_CRAFT else craft.FRS_BU end,
+  feed.FRS_BU,
+  feed.REPORTING_BASIS,
+  feed.GOC,
+  feed.ISSTRESSTEST,
+  acct.ACCT,
+  feed.GSST_CATEGORY_LEVEL2,
+  feed.MARKET,
+  feed.COUNTRY,
+  feed.FUND_ID;
