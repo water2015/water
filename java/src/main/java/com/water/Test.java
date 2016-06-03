@@ -1,6 +1,7 @@
 package com.water;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Test {
 
@@ -72,4 +73,8 @@ public class Test {
 		}).start();
 	}
 
+	public void test() {
+		AtomicInteger ai = new AtomicInteger();
+		ai.incrementAndGet();
+	}
 }

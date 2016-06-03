@@ -3,8 +3,6 @@ package com.water.jdk.java8;
 import java.util.Arrays;
 import java.util.function.Function;
 
-import org.apache.commons.lang.StringUtils;
-
 public class T {
 
 	public static void main(String[] args) {

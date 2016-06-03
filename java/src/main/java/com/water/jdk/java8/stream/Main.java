@@ -44,10 +44,9 @@ public class Main {
 		IntStream.generate(() -> 0).limit(5).forEach(System.out::println);
 		System.out.println("==========================================================================");
 
-		String str1 = "5 123,123,qwe,1,123, 25";
-		str1.chars().filter(n -> !Character.isDigit((char) n) && !Character.isWhitespace((char) n))
+		"5 123,123,qwe,1,123, 25".chars().filter(n -> !Character.isDigit((char) n) && !Character.isWhitespace((char) n))
 				.forEach(n -> System.out.print((char) n));
-		Pattern.compile(",").splitAsStream(str1).forEach(System.out::println);
+		Pattern.compile(",").splitAsStream("5 123,123,qwe,1,123, 25").forEach(System.out::println);
 		System.out.println("==========================================================================");
 
 		Files.lines(

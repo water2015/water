@@ -1,7 +1,5 @@
 package com.water.jdk.objinit;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 class T implements Cloneable {
 
 	public static int k = 0;
