@@ -4,7 +4,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -88,8 +87,7 @@ public class Main {
 		Employee.persons().stream().max(Comparator.comparingDouble(Employee::getIncome));
 		Employee.persons().stream().mapToDouble(Employee::getIncome).max();
 
-		Employee.persons().stream().map(Employee::getName)
-				.collect(ArrayList<String>::new, ArrayList::add, ArrayList::addAll);
+//		Employee.persons().stream().map(Employee::getName).collect(ArrayList<String>::new, ArrayList::add, ArrayList::addAll);
 		Employee.persons().stream().map(Employee::getName).collect(Collectors.toList());
 		Employee.persons().stream().map(Employee::getName).collect(Collectors.toCollection(TreeSet<String>::new));
 		Employee.persons().stream().collect(Collectors.summarizingDouble(Employee::getIncome));
